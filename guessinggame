@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# File: guessinggame.sh
+
+filecount=3
+count=1
+guessinggame_lines=0
+
+
+
+#filecount=$(svn ls -R https://github.com/drledgie/branches/master | wc -l)
+echo "The number of files is: $filecount."
+
+function guessinggame {
+while [[ $count -eq 1 ]]
+do 
+	filecount=3
+echo "How many files are in the current directory:"
+read response
+
+
+if [[ $response -eq $filecount ]]
+	then
+		echo "Congratulations, your guess is correct."
+		let count=$count-1
+	
+
+else
+	echo "Sorry, you need to try again!"
+	
+fi
+
+
+done
+
+ --exclude-lang=DTD,Lua,make
+
+}
+
+
+guessinggame
